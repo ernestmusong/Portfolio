@@ -1,0 +1,178 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b42bc5ce06.js" crossorigin="anonymous"></script>
+    <title>Musong's Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+        <!-- Header -->
+     <header>
+        <nav id="nav">
+            <div class="nav-child">
+                <a href="index.html">
+                    <div id="logo">
+                        <h3>My Logo</h3>
+                    </div>
+                </a>
+                <button id="bars">
+                    <i id="open" class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- Nav menu -->
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="#">Portfolio</a</li>
+                <li class="nav-menu-item"><a href="#about-me">About</a></li>
+                <li class="nav-menu-item"><a href="#form-section">Contact</a></li>  
+            </ul>
+        </nav>
+        <!-- Mobile menu -->
+         <aside class="sidebar show-sidebar">
+            <button id="close-btn">
+                <img src="images/close-icon.png" alt="">
+            </button>
+             <ul class="mobile-nav-menu">
+                <li class="nav-menu-item"><a class="nav-link" href="#">Portfolio</a></li>
+                <li class="nav-menu-item"><a class="nav-link" href="#about-me">About</a></li>
+                <li class="nav-menu-item"><a class="nav-link" href="#form-section">Contact</a></li> 
+            </ul>
+         </aside>
+        <!-- Headline -->
+        <div class="about">
+           <div class="title-wrapper">
+               <h2>Hey there. I’m Musong</h2>
+                <h2 id="title-green">I’m a software developer</h2>
+           </div>
+           <div class="support-text">
+             <p> I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, 
+                don’t hesitate to contact me.</p>
+           </div>
+           <!-- Social links -->
+           <ul class="social-media-icons">
+                <li class="social-icon">
+                    <a href="https://twitter.com/MusongAkeh" target="_blank"><i class="fab fa-twitter"></i></a> 
+                </li>
+                <li class="social-icon">
+                    <a href="https://www.linkedin.com/in/musong-ernest-akeh-921b73211/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="social-icon">
+                   <a href="" target="_blank"> <i class="fab fa-medium-m"></i></a>
+                </li>
+                <li class="social-icon">
+                    <a href="https://github.com/ernestmusong" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+                <li class="social-icon">
+                    <a href="" target="_blank"><i class="fab fa-angellist"></i></a>
+                </li>
+           </ul>
+           <!-- Button -->
+           <a href="#recent-works">
+                <button class="header-button">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+           </a>
+        </div>
+    </header>
+   <!-- Works -->
+   <section class="section">
+    <div class="works-title-wrapper">
+        <h2 >My Recent <br> Works</h2>
+        <div class="underline"></div>
+    </div>
+    <!-- Projects -->
+    <div class="cards-container"></div>
+</section>
+ <!-- End works -->
+    <!-- About me section -->
+    <section id="about-me" class="section" aria-label="about me">
+        <div class="about-wrapper">
+            <h2>About me</h2>
+                <p> I can help you build a product
+                     , feature or website Look through 
+                     some of my work and experience! If
+                      you like what you see and have a 
+                      project you need coded, 
+                    don’t hestiate to contact me.
+                </p>
+                <button class="section-button">
+                    get my resume
+                </button>
+        </div>
+    </section>
+     <!-- Languages Cards -->
+     <section id="about-me-cards" class="section">
+        <!-- Card -->
+        <div id="cards-container" class="cards-container"></div>
+    </section>
+    <!-- end languages Cards -->
+        <!-- Form section-->
+        <section id="form-section" class="section" aria-label="contact me">
+            <div class="contact-text">
+                <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
+            </div>
+    <!-- form -->
+    <div class="form-wrapper">
+        <form action="https://formspree.io/f/xayznbqb"
+              method="POST" class="contact-form">
+            <ul>
+                <li>
+                    <label for="name">
+                        <input type="text" id="name" name="full_name" maxlength="30" placeholder="Full name" required>
+                    </label>
+                </li>
+                <li>
+                    <label for="mail">
+                        <input type="email" id="mail" name="user_email" placeholder="Email address" required>
+                    </label>
+                </li>
+                <li>
+                    <label for="msg">
+                        <textarea id="msg" name="user_message"  maxlength="500" placeholder="Message" required></textarea>
+                    </label>
+                </li>
+            </ul>
+            <div class="for-error">
+                <span class="error" aria-live="polite"></span>
+            </div>
+                <button id="submit-btn" type="submit" class="section-button">
+                    get in touch
+                </button>
+        </form>
+    </div>
+    <!-- End form -->
+</section>
+
+ <!-- Popup details -->
+ <div class="popup-overlay remove-popup"></div>
+
+<!-- footer -->
+<footer>
+    <ul class="social-media-icons" >
+        <li class="social-icon">
+            <a href="https://twitter.com/MusongAkeh" target="_blank"><i class="fab fa-twitter"></i></a> 
+        </li>
+        <li class="social-icon">
+            <a href="https://www.linkedin.com/in/musong-ernest-akeh-921b73211/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li class="social-icon">
+            <a href="" target="_blank"> <i class="fab fa-medium-m"></i></a>
+         </li>
+        <li class="social-icon">
+            <i class="fab fa-github"></i>
+        </li>
+        <li class="social-icon">
+            <a href="" target="_blank"><i class="fab fa-angellist"></i></a>
+        </li>
+    </ul>
+   <!-- email -->
+    <div class="footer-email">
+        <a href="mailto: ernestakeh@gmail.com">ernestakeh@gmail.com</a>
+    </div>
+ </footer>
+ <!-- javascript -->
+ <script src="index.js"></script>
+</body>
+</html>
