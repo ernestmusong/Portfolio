@@ -1,7 +1,7 @@
 // data for all cards
 const data = [
   {
-    id: 2,
+    id: 1,
     detailUrl: '#_react',
     liveUrl: 'https://musong-furniture-store.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-House-Furniture-Store',
@@ -19,7 +19,7 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 3,
+    id: 2,
     detailUrl: '#_bootstrap',
     liveUrl: '/contribute-page',
     sourseUrl: 'https://github.com/ernestmusong/Annual-Income-Report',
@@ -37,7 +37,7 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 4,
+    id: 3,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-bookstore.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/Bookstore',
@@ -55,7 +55,7 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 5,
+    id: 4,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-math-magicians.onrender.com/',
     sourseUrl: 'https://github.com/ernestmusong/Math-magicians',
@@ -74,7 +74,7 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 6,
+    id: 5,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-react-pomodoro-clock.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-Pomodoro-clock',
@@ -94,7 +94,7 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 7,
+    id: 6,
     detailUrl: '#_rails',
     liveUrl: 'https://ernest-markdown-previewer.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-Markdown-Previewer',
@@ -113,7 +113,7 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 8,
+    id: 7,
     detailUrl: '#_rails',
     liveUrl: 'https://becuda.netlify.app/#/',
     sourseUrl: 'https://github.com/ernestmusong/Cultural-website',
