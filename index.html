@@ -24,9 +24,16 @@
             </div>
             <!-- Nav menu -->
             <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="#">Portfolio</a</li>
-                <li class="nav-menu-item"><a href="#about-me">About</a></li>
-                <li class="nav-menu-item"><a href="#form-section">Contact</a></li>  
+                <li class="nav-menu-item"><a class="scroll-link" href="#headline">Portfolio</a</li>
+                <li class="nav-menu-item"><a class="scroll-link" href="#about-me">About</a></li>
+                <li class="nav-menu-item"><a class="scroll-link" href="#form-section">Contact</a></li> 
+                <li class="dropdown nav-menu-item">
+                    <a href="#" class="dropbtn">Projects<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                      <a href="#react" class="scroll-link">React Projects</a>
+                      <a href="#javascript" class="scroll-link">JavaScript Projects</a> 
+                    </div>
+                </li> 
             </ul>
         </nav>
         <!-- Mobile menu -->
@@ -35,20 +42,29 @@
                 <img src="images/close-icon.png" alt="">
             </button>
              <ul class="mobile-nav-menu">
-                <li class="nav-menu-item"><a class="nav-link" href="#">Portfolio</a></li>
+                <li class="nav-menu-item"><a class="nav-link" href="#headline">Portfolio</a></li>
                 <li class="nav-menu-item"><a class="nav-link" href="#about-me">About</a></li>
-                <li class="nav-menu-item"><a class="nav-link" href="#form-section">Contact</a></li> 
+                <li class="nav-menu-item"><a class="nav-link" href="#form-section">Contact</a></li>
+                <li class="dropdown nav-menu-item">
+                    <a href="#" class="dropbtn">Projects<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                      <a href="#react" class="scroll-link">React Projects</a>
+                      <a href="#javascript" class="scroll-link">JavaScript Projects</a> 
+                    </div>
+                </li> 
             </ul>
          </aside>
         <!-- Headline -->
-        <div class="about">
+        <div class="about" id="headline">
            <div class="title-wrapper">
                <h2>Hey there. I’m Musong</h2>
-                <h2 id="title-green">I’m a software developer</h2>
+                <h2 id="title-green">A software Engineer</h2>
            </div>
            <div class="support-text">
-             <p> I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, 
-                don’t hesitate to contact me.</p>
+             <p>Experienced Full-Stack Developer with Expertise in React, Redux, Rails, SQL, Testing, WordPress, Web Hosting, and SEO. 
+                Look through some of <a class="scroll-link" href="#react">my works</a>. If you like what you see and have a project you need coded, 
+                don’t hesitate to <a class="scroll-link" href="#form-section">contact me</a>.
+            </p>
            </div>
            <!-- Social links -->
            <ul class="social-media-icons">
@@ -56,20 +72,20 @@
                     <a href="https://twitter.com/MusongAkeh" target="_blank"><i class="fab fa-twitter"></i></a> 
                 </li>
                 <li class="social-icon">
-                    <a href="https://www.linkedin.com/in/musong-ernest-akeh-921b73211/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/musongernestakeh/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </li>
                 <li class="social-icon">
-                   <a href="" target="_blank"> <i class="fab fa-medium-m"></i></a>
+                   <a href="https://medium.com/@ernestakeh" target="_blank"> <i class="fab fa-medium-m"></i></a>
                 </li>
                 <li class="social-icon">
                     <a href="https://github.com/ernestmusong" target="_blank"><i class="fab fa-github"></i></a>
                 </li>
                 <li class="social-icon">
-                    <a href="" target="_blank"><i class="fab fa-angellist"></i></a>
+                    <a href="https://wellfound.com/u/musong-ernest-akeh" target="_blank"><i class="fab fa-angellist"></i></a>
                 </li>
            </ul>
            <!-- Button -->
-           <a href="#recent-works">
+           <a href="#react">
                 <button class="header-button">
                     <i class="fas fa-chevron-down"></i>
                 </button>
@@ -77,15 +93,23 @@
         </div>
     </header>
    <!-- Works -->
-   <section class="section">
+   <section id="react" class="section">
     <div class="works-title-wrapper">
-        <h2 >My Recent <br> Works</h2>
+        <h2>React Projects</h2>
         <div class="underline"></div>
     </div>
     <!-- Projects -->
     <div class="cards-container"></div>
 </section>
- <!-- End works -->
+   <!-- Works -->
+   <section id="javascript" class="section">
+    <div class="works-title-wrapper">
+        <h2>JavaScript Projects</h2>
+        <div class="underline"></div>
+    </div>
+    <!-- Projects -->
+    <div class="cards-container"></div>
+</section>
     <!-- About me section -->
     <section id="about-me" class="section" aria-label="about me">
         <div class="about-wrapper">
@@ -155,16 +179,16 @@
             <a href="https://twitter.com/MusongAkeh" target="_blank"><i class="fab fa-twitter"></i></a> 
         </li>
         <li class="social-icon">
-            <a href="https://www.linkedin.com/in/musong-ernest-akeh-921b73211/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/musongernestakeh/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </li>
         <li class="social-icon">
-            <a href="" target="_blank"> <i class="fab fa-medium-m"></i></a>
+            <a href="https://medium.com/@ernestakeh" target="_blank"> <i class="fab fa-medium-m"></i></a>
          </li>
         <li class="social-icon">
             <i class="fab fa-github"></i>
         </li>
         <li class="social-icon">
-            <a href="" target="_blank"><i class="fab fa-angellist"></i></a>
+            <a href="https://wellfound.com/u/musong-ernest-akeh" target="_blank"><i class="fab fa-angellist"></i></a>
         </li>
     </ul>
    <!-- email -->

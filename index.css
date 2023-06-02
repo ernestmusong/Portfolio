@@ -8,6 +8,8 @@ body {
   box-sizing: border-box;
   outline: none;
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background: hsl(210, 36%, 96%);
 }
 
 a {
@@ -32,6 +34,7 @@ nav {
   padding-right: 24px;
   z-index: 999;
   background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .nav-child {
@@ -76,6 +79,7 @@ nav {
   place-items: center;
   border: none;
   background: #fff;
+  font-size: 1.5rem;
 }
 
 #close-btn {
@@ -209,15 +213,13 @@ nav {
   cursor: pointer;
 }
 
-/* Works */
+/* ---------------------------------------------Works */
 
 .section {
   width: 100%;
   padding-left: 24px;
   padding-right: 24px;
   margin: 0 auto;
-  margin-top: 156px;
-  margin-top: 24px;
 }
 
 .section .underline {
@@ -741,16 +743,48 @@ footer .footer-email a {
     justify-content: space-between;
     align-items: center;
     height: 40px;
+    background: #fff;
+  }
+  .nav-menu li,
+  .nav-menu-item a{
+    background: #fff;
   }
 
   .nav-menu-item a {
     font-family: inherit;
-    font-size: 0.94rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 20px;
     text-transform: capitalize;
     margin-right: 8px;
     color: #344563;
+  }
+
+  .dropdown {
+    overflow: visible;
+    height: 20px;
+  }
+ 
+  .dropdown-content {
+    visibility: hidden;
+    background-color: #f9f9f9;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 300;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
   }
 
   .about {
@@ -803,10 +837,9 @@ footer .footer-email a {
     width: 100%;
     padding-left: 134px;
     padding-right: 134px;
-    padding-top: 80px;
     padding-bottom: 80px;
     margin: 0 auto;
-    margin-top: 104px;
+    margin-top: 11.5rem;
   }
 
   .works-title-wrapper {
