@@ -157,6 +157,11 @@ nav {
   font-size: 100%;
   font-weight: 700;
   text-align: center;
+  visibility: hidden;
+}
+
+#my-name {
+  
 }
 
 .about .support-text {
@@ -174,6 +179,7 @@ nav {
 
 .about #title-green {
   color: green;
+  
 }
 
 .social-media-icons {
@@ -282,6 +288,10 @@ nav {
 .cards-container .project {
   border: 1px solid #d0d9d4;
   border-radius: 8px;
+}
+
+#cards-container {
+  display: none;
 }
 
 .image-wrapper {

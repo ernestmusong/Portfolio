@@ -348,3 +348,42 @@ scrollLinks.forEach((link) => {
     });
   });
 });
+
+//Type-writer
+
+    const text = "Hi, I’m Musong";
+    const text2 = "A software engineer";
+    const delay = 100; // milliseconds
+    let index = 0;
+    let index2 = 0;
+
+    function typeWriter() {
+      const name = document.getElementById("my-name");
+      name.textContent += text.charAt(index);
+      name.style.visibility = "visible";
+      index++;
+      
+      if (index < text.length) {
+        setTimeout(typeWriter, delay);
+      }
+    }
+typeWriter()
+
+function typeWriterTwo() {
+  const profession = document.getElementById("title-green");
+  profession.textContent += text2.charAt(index2);
+  profession.style.visibility = "visible";
+  index2++;
+
+  if (index2 < text2.length) {
+    setTimeout(typeWriterTwo, delay);
+  }
+}
+
+window.onload = function() {
+  setTimeout(typeWriterTwo, 1500);
+}
+
+
+
+
