@@ -6,10 +6,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
-  background: hsl(210, 36%, 96%);
 }
 
 a {
@@ -21,6 +19,10 @@ li {
 }
 
 /* Header and nav */
+
+header {
+  height: 100vh;
+}
 
 nav {
   display: flex;
@@ -137,18 +139,18 @@ nav {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-left: 24px;
-  padding-right: 24px;
-  margin: 0 auto;
   margin-top: 156px;
   background: url(images/header-img.png);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .title-wrapper {
-  height: 192px;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .title-wrapper h2 {
@@ -156,16 +158,10 @@ nav {
   font-family: inherit;
   font-size: 100%;
   font-weight: 700;
-  text-align: center;
 }
 
 #my-name {
   visibility: hidden;
-}
-
-.about .support-text {
-  height: 164px;
-  font-size: 1.25rem;
 }
 
 .about p {
@@ -173,13 +169,12 @@ nav {
   font-weight: 400;
   font-size: 100%;
   color: #172b4d;
-  text-align: center;
 }
 
 .about #title-green {
   color: green;
   animation: show 5s linear;
-  
+  font-size: 60%;
 }
 
 .social-media-icons {
@@ -819,11 +814,17 @@ footer .footer-email a {
     letter-spacing: 0.37px;
   }
 
+  .about #title-green {
+    font-size: 100%;
+   }
+
   .about .support-text {
     margin: 0 auto;
     margin-top: 24px;
     height: auto;
     width: 60%;
+    height: 164px;
+    font-size: 1.25rem;
   }
 
   .about p {
