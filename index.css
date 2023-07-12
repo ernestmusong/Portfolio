@@ -157,11 +157,10 @@ nav {
   font-size: 100%;
   font-weight: 700;
   text-align: center;
-  visibility: hidden;
 }
 
 #my-name {
-  
+  visibility: hidden;
 }
 
 .about .support-text {
@@ -179,6 +178,7 @@ nav {
 
 .about #title-green {
   color: green;
+  animation: show 5s linear;
   
 }
 
@@ -1027,5 +1027,22 @@ footer .footer-email a {
 
   footer .footer-email {
     display: none;
+  }
+}
+
+/* -------------------------------------------------KEY FRAMES-------------------------------------------- */
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+
+  55% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

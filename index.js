@@ -359,6 +359,7 @@ scrollLinks.forEach((link) => {
 
     function typeWriter() {
       const name = document.getElementById("my-name");
+      const profession = document.getElementById("title-green")
       name.textContent += text.charAt(index);
       name.style.visibility = "visible";
       index++;
@@ -366,23 +367,25 @@ scrollLinks.forEach((link) => {
       if (index < text.length) {
         setTimeout(typeWriter, delay);
       }
+
+      profession.textContent = text2;
     }
 typeWriter()
 
-function typeWriterTwo() {
-  const profession = document.getElementById("title-green");
-  profession.textContent += text2.charAt(index2);
-  profession.style.visibility = "visible";
-  index2++;
+// function typeWriterTwo() {
+//   const profession = document.getElementById("title-green");
+//   profession.textContent += text2.charAt(index2);
+//   profession.style.visibility = "visible";
+//   index2++;
 
-  if (index2 < text2.length) {
-    setTimeout(typeWriterTwo, delay);
-  }
-}
+//   if (index2 < text2.length) {
+//     setTimeout(typeWriterTwo, delay);
+//   }
+// }
 
-window.onload = function() {
-  setTimeout(typeWriterTwo, 1500);
-}
+// window.onload = function() {
+//   setTimeout(typeWriterTwo, 1500);
+// }
 
 
 
