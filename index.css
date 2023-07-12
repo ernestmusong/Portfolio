@@ -134,13 +134,19 @@ nav {
   color: #344563;
 }
 
+#all_projects {
+  background: red;
+}
+
 /* Headline */
 .about {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   width: 100%;
-  margin-top: 156px;
-  background: url(images/header-img.png);
+  height: calc(100% - 48px);
+  padding-top: 4rem;
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 24px;
