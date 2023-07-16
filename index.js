@@ -132,6 +132,59 @@ const data = [
   },
 
 ];
+const javascript = [
+  {
+    id: 1,
+    detailUrl: '#_javascript',
+    liveUrl: 'https://musong-to-do.netlify.app/',
+    sourseUrl: 'https://github.com/ernestmusong/To-do-List',
+    img: 'images/javascript/front2.png',
+    name: 'Todo list',
+    desc: `To-do-list is a web app that allows users to add, edit and remove items
+           saving data to local storage.`,
+    technologies: ['html', 'css', 'javaScript', 'webpack'],
+    skills: ['html', 'css', 'javaScript', 'webpack'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    id: 2,
+    detailUrl: '#_bootstrap',
+    liveUrl: 'https://ernestmusong.github.io/Emmacroy-Technologies/',
+    sourseUrl: 'https://github.com/ernestmusong/Emmacroy-Technologies',
+    img: 'images/javascript/emmacroy-tech.PNG',
+    name: 'Emmacroy technologies',
+    desc: `An education website for web development.`,
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    id: 3,
+    detailUrl: '#_rails',
+    liveUrl: 'https://musong-tv-shows.netlify.app/',
+    sourseUrl: 'https://github.com/ernestmusong/TVmaze-movies',
+    img: 'images/javascript/tvmaze.png',
+    name: 'TVmaze movies',
+    desc: `Pulls from the Bookstore api to display a
+    list of books, with the following features: Add,
+    Remove, and Edit.`,
+    technologies: ['html', 'css', 'javaScript', 'webpack'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  } 
+];
 
 // SIDE-BAR
 const sideBar = document.querySelector('.sidebar');
@@ -146,10 +199,12 @@ sideBar.addEventListener('click', () => {
 
 // WORKS
 const worksDom = document.querySelector('.cards-container');
+const javascriptProjects = document.querySelector('#javascript-cards');
 const languagesDom = document.querySelector('#cards-container');
 const popUpOverlay = document.querySelector('.popup-overlay');
-let currenItem = 0;
 let result = '';
+let javascriptResult = '';
+let currenItem = 0;
 
 // DISPLAYING WORKS DATA
 const displayProjects = (projects) => {
@@ -182,6 +237,36 @@ const displayProjects = (projects) => {
   worksDom.innerHTML = result;
   return result;
 };
+const displayJavascritptProjects = (projects) => {
+  projects.map((item) => {
+    const { technologies } = item;
+    let allTechnologies = '';
+    for (let i = 0; i < technologies.length; i += 1) {
+      allTechnologies += `<li><button>${technologies[i]}</button></li>`;
+    }
+    javascriptResult += `
+  <div id=${item.detailUrl} class="project">
+        <div class="image-wrapper">
+            <img class="project-img" src=${item.img} alt="project image">
+        </div>
+            <div class="project-footer">
+            <div class="project-title-wrapper">
+                <h4>${item.name}</h4>
+            </div>
+            <ul class="project-buttons-wrapper">
+               ${allTechnologies}
+            </ul>
+              <button id=${item.id.toString()} onClick = selectPopUp(this.id) class="section-button project-btn" data-id=${item.id}>
+                  see project
+              </button>
+        </div>
+    </div>
+  `;
+    return javascriptResult;
+  });
+  javascriptProjects.innerHTML = javascriptResult;
+  return javascriptResult;
+};
 
 // CLOSE POPUP
 function closePopUp() {
@@ -205,34 +290,34 @@ const displayPopUp = (projects) => {
   });
   detailResult += `
       <div class="popup-card">
-      <button onClick=closePopUp() id="desktop-popup-close">
-          <img src=${projects[currenItem].desktopPopUpClose} alt="">
-     </button>
-      <div class="popup-img-wrap">
-          <img src=${projects[currenItem].img} alt="">
-          <button onClick=closePopUp() id="popup-close">
-              <img src=${projects[currenItem].mobilePopUpClose} alt="">
-         </button>
+        <button onClick=closePopUp() id="desktop-popup-close">
+            <img src=${projects[currenItem].desktopPopUpClose} alt="">
+        </button>
+        <button onClick=closePopUp() id="popup-close">
+          <img src=${projects[currenItem].mobilePopUpClose} alt="">
+        </button>
+        <div class="popup-img-wrap">
+            <img src=${projects[currenItem].img} alt="">
+
+        </div>
+        <div class="popup-title-wrap">
+            <h3>${projects[currenItem].name}</h3>
+            <ul id="desktop-popup-btns" class="popup-btn-wrap">
+                <li><a id="desktop-see-live-btn" href=${projects[currenItem].liveUrl}>see live <img src=${projects[currenItem].seeLiveIcon} alt="icon"></a></li>
+                <li><a id="desktop-see-source-btn" href=${projects[currenItem].sourseUrl}>see source <img src=${projects[currenItem].seeSourceIcon} alt="icon"></a></li>
+            </ul>
+        </div>
+        <ul id="popup-tech" class="popup-tech">
+          ${allTechnologies}
+      </ul>
+      <div class="popup-desc">
+          <p>${projects[currenItem].desc}</p>
 
       </div>
-      <div class="popup-title-wrap">
-          <h3>${projects[currenItem].name}</h3>
-          <ul id="desktop-popup-btns" class="popup-btn-wrap">
-              <li><a id="desktop-see-live-btn" href=${projects[currenItem].liveUrl}>see live <img src=${projects[currenItem].seeLiveIcon} alt="icon"></a></li>
-              <li><a id="desktop-see-source-btn" href=${projects[currenItem].sourseUrl}>see source <img src=${projects[currenItem].seeSourceIcon} alt="icon"></a></li>
-           </ul>
-      </div>
-      <ul id="popup-tech" class="popup-tech">
-        ${allTechnologies}
-     </ul>
-     <div class="popup-desc">
-         <p>${projects[currenItem].desc}</p>
-
-     </div>
-     <ul id="popup-mobile-btns" class="popup-btn-wrap">
-        <li><a id="see-live-btn" href="">see live <img src=${projects[currenItem].seeLiveIcon} alt=""></a></li>
-        <li><a id="see-source-btn"a href="">see source <img src=${projects[currenItem].seeSourceIcon} alt=""></a></li>
-     </ul>
+      <ul id="popup-mobile-btns" class="popup-btn-wrap">
+          <li><a id="see-live-btn" href="">see live <img src=${projects[currenItem].seeLiveIcon} alt=""></a></li>
+          <li><a id="see-source-btn"a href="">see source <img src=${projects[currenItem].seeSourceIcon} alt=""></a></li>
+      </ul>
   </div>
 
       `;
@@ -279,6 +364,7 @@ const displayLanguages = (languages) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   displayProjects(data);
+  displayJavascritptProjects(javascript)
   displayLanguages(data);
   displayPopUp(data);
 });
@@ -372,20 +458,6 @@ scrollLinks.forEach((link) => {
     }
 typeWriter()
 
-// function typeWriterTwo() {
-//   const profession = document.getElementById("title-green");
-//   profession.textContent += text2.charAt(index2);
-//   profession.style.visibility = "visible";
-//   index2++;
-
-//   if (index2 < text2.length) {
-//     setTimeout(typeWriterTwo, delay);
-//   }
-// }
-
-// window.onload = function() {
-//   setTimeout(typeWriterTwo, 1500);
-// }
 
 
 

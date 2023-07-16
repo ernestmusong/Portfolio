@@ -324,6 +324,7 @@ nav {
   font-size: 100%;
   color: #3a4a42;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .project-buttons-wrapper {
