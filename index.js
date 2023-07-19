@@ -189,11 +189,12 @@ const javascript = [
 // SIDE-BAR
 const sideBar = document.querySelector('.sidebar');
 const openBtn = document.querySelector('#open');
-
+const closeBtn = document.querySelector('#close-btn');
+ 
 openBtn.addEventListener('click', () => {
   sideBar.classList.toggle('sidebar');
 });
-sideBar.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
   sideBar.classList.toggle('sidebar');
 });
 
@@ -423,6 +424,7 @@ const scrollLinks = document.querySelectorAll(".scroll-link");
 scrollLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
+    sideBar.classList.toggle('sidebar');
     //navigate to specific spot
     const id = e.currentTarget.getAttribute("href").slice(1);
     const element = document.getElementById(id);

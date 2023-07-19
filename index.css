@@ -134,11 +134,40 @@ nav {
   color: #344563;
 }
 
+.dropdown {
+  overflow: visible;
+  height: 20px;
+}
+
+.dropdown-content {
+  visibility: hidden;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 300;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  visibility: visible;
+}
+
+
 #all_projects {
   background: red;
 }
 
-/* Headline */
+/* --------------------------------------------------------------Headline---------------------- */
 .about {
   display: flex;
   flex-direction: column;
@@ -766,34 +795,6 @@ footer .footer-email a {
     text-transform: capitalize;
     margin-right: 8px;
     color: #344563;
-  }
-
-  .dropdown {
-    overflow: visible;
-    height: 20px;
-  }
- 
-  .dropdown-content {
-    visibility: hidden;
-    background-color: #f9f9f9;
-    min-width: 170px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 300;
-  }
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-    visibility: visible;
   }
 
   .about {
