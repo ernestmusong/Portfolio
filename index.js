@@ -1,4 +1,4 @@
-// data for all cards
+// React
 const data = [
   {
     id: 1,
@@ -132,6 +132,7 @@ const data = [
   },
 
 ];
+// JavaScript
 const javascript = [
   {
     id: 1,
@@ -186,6 +187,110 @@ const javascript = [
   } 
 ];
 
+// Wordpress
+const wordpress = [
+  {
+    id: 1,
+    detailUrl: '#_javascript',
+    liveUrl: 'https://www.nextgig.biz/',
+    sourseUrl: '#',
+    img: 'images/wordpress/nextgig.png',
+    name: 'Nextgig',
+    desc: `A multi-vendor e-commerce website built with WordPress.`,
+    technologies: ['WordPress', 'SEO', 'themes', 'Plugins'],
+    skills: ['html', 'css', 'javaScript', 'webpack'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    id: 2,
+    detailUrl: '#_bootstrap',
+    liveUrl: 'https://etickets.nextgig.biz/en/',
+    sourseUrl: '#',
+    img: 'images/wordpress/event.png',
+    name: 'Ticketing website',
+    desc: `A website where users can buy tickets for events.`,
+    technologies: ['WordPress', 'SEO', 'themes', 'Plugins'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    id: 3,
+    detailUrl: '#_rails',
+    liveUrl: 'https://facultyofeducubuea.com/',
+    sourseUrl: '#',
+    img: 'images/wordpress/faculty-of-educ.png',
+    name: 'Faculty of Education - University of Buea',
+    desc: 'A website for the faculty of education of the University of Buea.',
+    technologies: ['WordPress', 'html', 'css'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  }, 
+  {
+    id: 4,
+    detailUrl: '#_rails',
+    liveUrl: 'https://engineeringec.com/',
+    sourseUrl: '#',
+    img: 'images/wordpress/green-engineering.png',
+    name: 'Green Engineering And Consultancy ltd',
+    desc: 'Green Engineering And Consultancy is a multidisciplinary Engineering And Consultancy company providing the best Engineering services in Cameroon with several years of engineering experience and project execution',
+    technologies: ['WordPress', 'SEO'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  } 
+];
+
+// Rails
+const rails = [
+  {
+    id: 1,
+    detailUrl: '#_javascript',
+    liveUrl: 'https://musong-budget-app.onrender.com/',
+    sourseUrl: 'https://github.com/ernestmusong/Budget-app',
+    img: 'images/rails/budget-app.png',
+    name: 'budget app',
+    desc: ` A mobile web application where users can manage their budget: Users have a list of transactions associated with a category, so that they can see how much money they spent and on what.`,
+    technologies: ['Rails', 'Postgres'],
+    skills: ['html', 'css', 'javaScript', 'webpack'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    id: 2,
+    detailUrl: '#_bootstrap',
+    liveUrl: '#',
+    sourseUrl: 'https://github.com/ernestmusong/Recipe-app',
+    img: 'images/rails/recipe-app.png',
+    name: 'Recipe app',
+    desc: `A web application that help users browse through a collection of recipes. Users are also allowed to sign up and create their own recipes as well as remove them.`,
+    technologies: ['Rails', 'Postgres'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  } 
+];
+
 // SIDE-BAR
 const sideBar = document.querySelector('.sidebar');
 const openBtn = document.querySelector('#open');
@@ -201,10 +306,14 @@ closeBtn.addEventListener('click', () => {
 // WORKS
 const worksDom = document.querySelector('.cards-container');
 const javascriptProjects = document.querySelector('#javascript-cards');
+const railsProjects = document.querySelector('#rails-cards');
+const wordPressProjects = document.querySelector('#wordpress-cards');
 const languagesDom = document.querySelector('#cards-container');
 const popUpOverlay = document.querySelector('.popup-overlay');
 let result = '';
 let javascriptResult = '';
+let railsResult = '';
+let wordPressResult = '';
 let currenItem = 0;
 
 // DISPLAYING WORKS DATA
@@ -238,6 +347,8 @@ const displayProjects = (projects) => {
   worksDom.innerHTML = result;
   return result;
 };
+
+// JAVASCRIPT
 const displayJavascritptProjects = (projects) => {
   projects.map((item) => {
     const { technologies } = item;
@@ -257,7 +368,7 @@ const displayJavascritptProjects = (projects) => {
             <ul class="project-buttons-wrapper">
                ${allTechnologies}
             </ul>
-              <button id=${item.id.toString()} onClick = selectPopUp(this.id) class="section-button project-btn" data-id=${item.id}>
+              <button id=${item.id.toString()} onClick = selectJavaScript(this.id) class="section-button project-btn" data-id=${item.id}>
                   see project
               </button>
         </div>
@@ -267,6 +378,70 @@ const displayJavascritptProjects = (projects) => {
   });
   javascriptProjects.innerHTML = javascriptResult;
   return javascriptResult;
+};
+
+// RAILS
+const displayRailsProjects = (projects) => {
+  projects.map((item) => {
+    const { technologies } = item;
+    let allTechnologies = '';
+    for (let i = 0; i < technologies.length; i += 1) {
+      allTechnologies += `<li><button>${technologies[i]}</button></li>`;
+    }
+    railsResult += `
+  <div id=${item.detailUrl} class="project">
+        <div class="image-wrapper">
+            <img class="project-img" src=${item.img} alt="project image">
+        </div>
+            <div class="project-footer">
+            <div class="project-title-wrapper">
+                <h4>${item.name}</h4>
+            </div>
+            <ul class="project-buttons-wrapper">
+               ${allTechnologies}
+            </ul>
+              <button id=${item.id.toString()} onClick = selectRails(this.id) class="section-button project-btn" data-id=${item.id}>
+                  see project
+              </button>
+        </div>
+    </div>
+  `;
+    return railsResult;
+  });
+  railsProjects.innerHTML = railsResult;
+  return railsResult;
+};
+
+// WORDPRESS
+const displayWordPressProjects = (projects) => {
+  projects.map((item) => {
+    const { technologies } = item;
+    let allTechnologies = '';
+    for (let i = 0; i < technologies.length; i += 1) {
+      allTechnologies += `<li><button>${technologies[i]}</button></li>`;
+    }
+    wordPressResult += `
+  <div id=${item.detailUrl} class="project">
+        <div class="image-wrapper">
+            <img class="project-img" src=${item.img} alt="project image">
+        </div>
+            <div class="project-footer">
+            <div class="project-title-wrapper">
+                <h4>${item.name}</h4>
+            </div>
+            <ul class="project-buttons-wrapper">
+               ${allTechnologies}
+            </ul>
+              <button id=${item.id.toString()} onClick = selectWordPress(this.id) class="section-button project-btn" data-id=${item.id}>
+                  see project
+              </button>
+        </div>
+    </div>
+  `;
+    return wordPressResult;
+  });
+  wordPressProjects.innerHTML = wordPressResult;
+  return wordPressResult;
 };
 
 // CLOSE POPUP
@@ -333,6 +508,26 @@ function selectPopUp(id) {
   popUpOverlay.classList.toggle('remove-popup');
 }
 selectPopUp(1);
+
+function selectJavaScript(id) {
+  currenItem = id - 1;
+  displayPopUp(javascript);
+  popUpOverlay.classList.toggle('remove-popup');
+}
+selectJavaScript(1);
+function selectRails(id) {
+  currenItem = id - 1;
+  displayPopUp(rails);
+  popUpOverlay.classList.toggle('remove-popup');
+}
+selectRails(1);
+function selectWordPress(id) {
+  currenItem = id - 1;
+  displayPopUp(wordpress);
+  popUpOverlay.classList.toggle('remove-popup');
+}
+selectWordPress(1);
+
 // DISPLAYING LANGUAGES DATA
 const displayLanguages = (languages) => {
   let result = '';
@@ -365,9 +560,14 @@ const displayLanguages = (languages) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   displayProjects(data);
-  displayJavascritptProjects(javascript)
+  displayJavascritptProjects(javascript);
+  displayWordPressProjects(wordpress);
+  displayRailsProjects(rails);
   displayLanguages(data);
   displayPopUp(data);
+  displayPopUp(javascript);
+  displayPopUp(rails);
+  displayPopUp(wordpress);
 });
 
 // VALIDATE CONTACT FORM
