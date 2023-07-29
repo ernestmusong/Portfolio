@@ -119,9 +119,7 @@ const data = [
     sourseUrl: 'https://github.com/ernestmusong/Cultural-website',
     img: 'images/works-images/becuda.png',
     name: 'Cultural website',
-    desc: `Cultural website enables users to signup, login, contribute, keep
-    track of their contributions and see records of all contributions of my 
-    cultural association.`,
+    desc: `A website created to manage the activities of my cultural association. Users can make contributions, keep track of their contributions and see records of all contributions of my cultural association.`,
     technologies: ['React', 'HTML', 'CSS'],
     skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
     skillsImg: 'images/icon-languages.png',
