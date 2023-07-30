@@ -634,6 +634,7 @@ input:focus:invalid {
   padding-right: 52px;
   padding-top: 12px;
   padding-bottom: 12px;
+  text-transform: capitalize;
 }
 
 .popup-tech {

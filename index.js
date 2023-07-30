@@ -477,8 +477,8 @@ const displayPopUp = (projects) => {
         <div class="popup-title-wrap">
             <h3>${projects[currenItem].name}</h3>
             <ul id="desktop-popup-btns" class="popup-btn-wrap">
-                <li><a id="desktop-see-live-btn" href=${projects[currenItem].liveUrl}>see live <img src=${projects[currenItem].seeLiveIcon} alt="icon"></a></li>
-                <li><a id="desktop-see-source-btn" href=${projects[currenItem].sourseUrl}>see source <img src=${projects[currenItem].seeSourceIcon} alt="icon"></a></li>
+                <li><a id="desktop-see-live-btn" href=${projects[currenItem].liveUrl} target="_blank">see live <img src=${projects[currenItem].seeLiveIcon} alt="icon"></a></li>
+                <li><a id="desktop-see-source-btn" href=${projects[currenItem].sourseUrl} target="_blank">see source <img src=${projects[currenItem].seeSourceIcon} alt="icon"></a></li>
             </ul>
         </div>
         <ul id="popup-tech" class="popup-tech">
@@ -489,8 +489,8 @@ const displayPopUp = (projects) => {
 
       </div>
       <ul id="popup-mobile-btns" class="popup-btn-wrap">
-          <li><a id="see-live-btn" href="">see live <img src=${projects[currenItem].seeLiveIcon} alt=""></a></li>
-          <li><a id="see-source-btn"a href="">see source <img src=${projects[currenItem].seeSourceIcon} alt=""></a></li>
+          <li><a id="see-live-btn" href=${projects[currenItem].liveUrl} target="_blank">see live <img src=${projects[currenItem].seeLiveIcon} alt=""></a></li>
+          <li><a id="see-source-btn"a href=${projects[currenItem].sourseUrl} target="_blank">see source <img src=${projects[currenItem].seeSourceIcon} alt=""></a></li>
       </ul>
   </div>
 
