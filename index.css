@@ -18,7 +18,7 @@ li {
   list-style-type: none;
 }
 
-/* Header and nav */
+/* ----------------------------------------------------------------------Header and nav */
 
 header {
   height: 100vh;
@@ -252,6 +252,7 @@ nav {
   padding-left: 24px;
   padding-right: 24px;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .section .underline {
