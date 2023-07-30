@@ -27,6 +27,7 @@ header {
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   top: 0;
   left: 0;
@@ -160,11 +161,6 @@ nav {
 .dropdown:hover .dropdown-content {
   display: block;
   visibility: visible;
-}
-
-
-#all_projects {
-  background: red;
 }
 
 /* --------------------------------------------------------------Headline---------------------- */
@@ -756,21 +752,19 @@ footer .footer-email a {
   }
 
   nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 72px;
   }
 
-  .nav-child,
-  #logo,
+  #bars,
   #bars,
   .sidebar,
   .show-sidebar,
   #close-btn {
     display: none !important;
   }
-
+  .nav-child {
+    width: auto;
+  }
   .nav-menu {
     display: flex;
     justify-content: space-between;
