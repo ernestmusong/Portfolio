@@ -505,26 +505,22 @@ function selectPopUp(id) {
   displayPopUp(data);
   popUpOverlay.classList.toggle('remove-popup');
 }
-selectPopUp(1);
 
 function selectJavaScript(id) {
   currenItem = id - 1;
   displayPopUp(javascript);
   popUpOverlay.classList.toggle('remove-popup');
 }
-selectJavaScript(1);
 function selectRails(id) {
   currenItem = id - 1;
   displayPopUp(rails);
   popUpOverlay.classList.toggle('remove-popup');
 }
-selectRails(1);
 function selectWordPress(id) {
   currenItem = id - 1;
   displayPopUp(wordpress);
   popUpOverlay.classList.toggle('remove-popup');
 }
-selectWordPress(1);
 
 // DISPLAYING LANGUAGES DATA
 const displayLanguages = (languages) => {
@@ -557,15 +553,13 @@ const displayLanguages = (languages) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  popUpOverlay.classList.add('remove-popup');
   displayProjects(data);
   displayJavascritptProjects(javascript);
   displayWordPressProjects(wordpress);
   displayRailsProjects(rails);
-  displayLanguages(data);
   displayPopUp(data);
-  displayPopUp(javascript);
-  displayPopUp(rails);
-  displayPopUp(wordpress);
+  
 });
 
 // VALIDATE CONTACT FORM
