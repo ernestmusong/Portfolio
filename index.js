@@ -652,6 +652,17 @@ scrollLinks.forEach((link) => {
     }
 typeWriter()
 
+// DISPLAY DATE
+
+const time = document.querySelector('#date');
+let date = new Date();
+time.textContent = `${date.toDateString()}`;
+
+setInterval(() => {
+  let date = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+  time.textContent = `${date}`;
+}, 1000);
+
 
 
 

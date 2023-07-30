@@ -736,17 +736,12 @@ footer .footer-email a {
 
 /* ------------------------------------------Media queries------------------------------------------ */
 @media screen and (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
-  #desktop-popup-btns {
-    display: none;
-  }
-
+  .nav-menu,
+  .date-time,
+  #desktop-popup-btns,
   #desktop-popup-close {
     display: none;
-  }
+}
 }
 
 @media screen and (min-width: 768px) {
