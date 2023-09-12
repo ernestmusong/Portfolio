@@ -71,11 +71,13 @@ nav {
 
 #logo h3 {
   font-size: 100%;
-  color: #28352f;
+  color: green;
+  text-transform: uppercase;
 }
 
 #date {
   color: green;
+  font-weight: bold;
 }
 
 /* --------------------------------------Mobile menu---------------------------------------------- */
@@ -889,10 +891,6 @@ footer .footer-email a {
 
   .works-title-wrapper {
     margin-bottom: 52px;
-  }
-
-  .underline {
-    display: none;
   }
 
   .about-wrapper p {
