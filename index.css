@@ -87,8 +87,9 @@ nav {
   width: 40px;
   display: grid;
   place-items: center;
+  background: transparent;
   border: none;
-  background: #fff;
+  color: green;
   font-size: 1.5rem;
 }
 
