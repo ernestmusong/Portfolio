@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Codystar:300&display=swap");
 
 *,
 html,
@@ -71,6 +72,10 @@ nav {
 #logo h3 {
   font-size: 100%;
   color: #28352f;
+}
+
+#date {
+  color: green;
 }
 
 /* --------------------------------------Mobile menu---------------------------------------------- */
@@ -168,10 +173,10 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
   height: calc(100% - 48px);
-  padding-top: 4rem;
+  padding-top: 3rem;
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 24px;
@@ -243,6 +248,29 @@ nav {
 
 .about .header-button:hover {
   cursor: pointer;
+}
+
+.contact-link {
+  color: red;
+  text-decoration: underline;
+}
+
+.mobile-time {
+  background: #000;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 0;
+  display: grid;
+  place-items: center;
+}
+
+#mobile-date-time {
+
+  animation: glow 2s ease-in-out infinite alternate;
+  font-weight: bolder;
+  font-family: "Codystar";
+  letter-spacing: 0;
+  font-size: 2rem;
 }
 
 /* ---------------------------------------------Works */
@@ -735,14 +763,17 @@ footer .footer-email a {
 /* ------------------------------------------Media queries------------------------------------------ */
 @media screen and (max-width: 768px) {
   .nav-menu,
-  .date-time,
   #desktop-popup-btns,
+  .date-time,
   #desktop-popup-close {
     display: none;
 }
 }
 
 @media screen and (min-width: 768px) {
+  .mobile-time {
+    display: none;
+  }
   header {
     background: url(images/Header-llustration-desktop@2x.png);
     background-size: cover;
@@ -794,6 +825,14 @@ footer .footer-email a {
     padding-bottom: 184px;
     background: none;
     position: absolute;
+  }
+
+  .wrap {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    height: auto;
   }
 
   .title-wrapper {
@@ -1041,5 +1080,21 @@ footer .footer-email a {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2,
+      0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2,
+      0 0 90px #00fff2;
+  }
+
+  to {
+    color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2,
+      0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2,
+      0 1 90px #00fff2;
   }
 }

@@ -1,4 +1,3 @@
-// React
 const data = [
   {
     id: 1,
@@ -448,7 +447,7 @@ const displayWordPressProjects = (projects) => {
             <ul class="project-buttons-wrapper">
                ${allTechnologies}
             </ul>
-              <button id=${item.id.toString()} onClick = selectWordPress(this.id) class="section-button project-btn" data-id=${item.id}>
+              <button id=${item.id.toString()} onClick=selectWordPress(this.id) class="section-button project-btn" data-id=${item.id}>
                   see project
               </button>
         </div>
@@ -673,8 +672,10 @@ typeWriter()
 // DISPLAY DATE
 
 const time = document.querySelector('#date');
+const mobileTime = document.querySelector('#mobile-date-time');
 let date = new Date();
 time.textContent = `${date.toDateString()}`;
+mobileTime.textContent = `${date.toDateString()}`;
 
 setInterval(() => {
   let date = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
