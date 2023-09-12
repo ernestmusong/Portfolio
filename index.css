@@ -242,14 +242,19 @@ nav {
   height: 40px;
   width: 40px;
   border-radius: 32px;
-  border: 1px solid #dfe1e6;
+  border: none;
   margin: 0 auto;
   display: grid;
   place-items: center;
+  background: green;
+  color: #f0f0f0;
 }
 
 .about .header-button:hover {
   cursor: pointer;
+  background: transparent;
+  border: 2px solid green;
+  color: green;
 }
 
 .contact-link {
