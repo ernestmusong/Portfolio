@@ -61,6 +61,11 @@ nav {
   transition: 2s linear;
 }
 
+.scroll-link:hover,
+.dropbtn:hover {
+  opacity: 0.5;
+}
+
 .popup-title-wrap h3 {
   color: #172b4d;
   font-size: 2rem;
