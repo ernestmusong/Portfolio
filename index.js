@@ -151,7 +151,7 @@ const javascript = [
   {
     id: 2,
     detailUrl: '#_bootstrap',
-    liveUrl: 'https://ernestmusong.github.io/Emmacroy-Technologies/',
+    liveUrl: 'https://emmacroy.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/Emmacroy-Technologies',
     img: 'images/javascript/emmacroy-tech.PNG',
     name: 'Emmacroy technologies',
