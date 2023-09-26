@@ -18,6 +18,23 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
+    id: 7,
+    detailUrl: '#_rails',
+    liveUrl: 'https://becuda.netlify.app/#/',
+    sourseUrl: 'https://github.com/ernestmusong/Cultural-website',
+    img: 'images/works-images/becuda.png',
+    name: 'Cultural website',
+    desc: `A website created to manage the activities of my cultural association. Users can make contributions, keep track of their contributions and see records of all contributions of my cultural association.`,
+    technologies: ['React', 'HTML', 'CSS'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+
+  {
     id: 2,
     detailUrl: '#_bootstrap',
     liveUrl: '/contribute-page',
@@ -111,37 +128,21 @@ const data = [
     seeLiveIcon: 'images/see-live.png',
     seeSourceIcon: 'images/see-source.png',
   },
-  {
-    id: 7,
-    detailUrl: '#_rails',
-    liveUrl: 'https://becuda.netlify.app/#/',
-    sourseUrl: 'https://github.com/ernestmusong/Cultural-website',
-    img: 'images/works-images/becuda.png',
-    name: 'Cultural website',
-    desc: `A website created to manage the activities of my cultural association. Users can make contributions, keep track of their contributions and see records of all contributions of my cultural association.`,
-    technologies: ['React', 'HTML', 'CSS'],
-    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
-    skillsImg: 'images/icon-languages.png',
-    desktopPopUpClose: 'images/desktop-popup-close.png',
-    mobilePopUpClose: 'images/close-detail.png',
-    seeLiveIcon: 'images/see-live.png',
-    seeSourceIcon: 'images/see-source.png',
-  },
-
 ];
 // JavaScript
 const javascript = [
   {
-    id: 1,
-    detailUrl: '#_javascript',
-    liveUrl: 'https://musong-to-do.netlify.app/',
-    sourseUrl: 'https://github.com/ernestmusong/To-do-List',
-    img: 'images/javascript/front2.png',
-    name: 'Todo list',
-    desc: `To-do-list is a web app that allows users to add, edit and remove items
-           saving data to local storage.`,
+    id: 3,
+    detailUrl: '#_rails',
+    liveUrl: 'https://musong-tv-shows.netlify.app/',
+    sourseUrl: 'https://github.com/ernestmusong/TVmaze-movies',
+    img: 'images/javascript/tvmaze.png',
+    name: 'TVmaze movies',
+    desc: `Pulls from the Bookstore api to display a
+    list of books, with the following features: Add,
+    Remove, and Edit.`,
     technologies: ['html', 'css', 'javaScript', 'webpack'],
-    skills: ['html', 'css', 'javaScript', 'webpack'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
     skillsImg: 'images/icon-languages.png',
     desktopPopUpClose: 'images/desktop-popup-close.png',
     mobilePopUpClose: 'images/close-detail.png',
@@ -165,23 +166,22 @@ const javascript = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 3,
-    detailUrl: '#_rails',
-    liveUrl: 'https://musong-tv-shows.netlify.app/',
-    sourseUrl: 'https://github.com/ernestmusong/TVmaze-movies',
-    img: 'images/javascript/tvmaze.png',
-    name: 'TVmaze movies',
-    desc: `Pulls from the Bookstore api to display a
-    list of books, with the following features: Add,
-    Remove, and Edit.`,
+    id: 1,
+    detailUrl: '#_javascript',
+    liveUrl: 'https://musong-to-do.netlify.app/',
+    sourseUrl: 'https://github.com/ernestmusong/To-do-List',
+    img: 'images/javascript/front2.png',
+    name: 'Todo list',
+    desc: `To-do-list is a web app that allows users to add, edit and remove items
+           saving data to local storage.`,
     technologies: ['html', 'css', 'javaScript', 'webpack'],
-    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skills: ['html', 'css', 'javaScript', 'webpack'],
     skillsImg: 'images/icon-languages.png',
     desktopPopUpClose: 'images/desktop-popup-close.png',
     mobilePopUpClose: 'images/close-detail.png',
     seeLiveIcon: 'images/see-live.png',
     seeSourceIcon: 'images/see-source.png',
-  } 
+  },
 ];
 
 // Wordpress
