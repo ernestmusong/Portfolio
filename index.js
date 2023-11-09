@@ -1,6 +1,5 @@
 const data = [
   {
-    id: 1,
     detailUrl: '#_react',
     liveUrl: 'https://musong-furniture-store.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-House-Furniture-Store',
@@ -18,7 +17,6 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 7,
     detailUrl: '#_rails',
     liveUrl: 'https://becuda.netlify.app/#/',
     sourseUrl: 'https://github.com/ernestmusong/Cultural-website',
@@ -35,7 +33,6 @@ const data = [
   },
 
   {
-    id: 2,
     detailUrl: '#_bootstrap',
     liveUrl: '/contribute-page',
     sourseUrl: 'https://github.com/ernestmusong/Annual-Income-Report',
@@ -53,7 +50,6 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 3,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-bookstore.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/Bookstore',
@@ -71,7 +67,6 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 4,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-math-magicians.onrender.com/',
     sourseUrl: 'https://github.com/ernestmusong/Math-magicians',
@@ -90,7 +85,6 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 5,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-react-pomodoro-clock.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-Pomodoro-clock',
@@ -110,7 +104,6 @@ const data = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 6,
     detailUrl: '#_rails',
     liveUrl: 'https://ernest-markdown-previewer.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-Markdown-Previewer',
@@ -132,7 +125,6 @@ const data = [
 // JavaScript
 const javascript = [
   {
-    id: 3,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-tv-shows.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/TVmaze-movies',
@@ -150,7 +142,6 @@ const javascript = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 2,
     detailUrl: '#_bootstrap',
     liveUrl: 'https://emmacroy.cm/',
     sourseUrl: 'https://github.com/ernestmusong/Emmacroy-Technologies',
@@ -166,7 +157,6 @@ const javascript = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 1,
     detailUrl: '#_javascript',
     liveUrl: 'https://musong-to-do.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/To-do-List',
@@ -187,7 +177,6 @@ const javascript = [
 // Wordpress
 const wordpress = [
   {
-    id: 1,
     detailUrl: '#_javascript',
     liveUrl: 'https://www.nextgig.biz/',
     sourseUrl: '#',
@@ -203,7 +192,6 @@ const wordpress = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 2,
     detailUrl: '#_bootstrap',
     liveUrl: 'https://etickets.nextgig.biz/en/',
     sourseUrl: '#',
@@ -219,7 +207,6 @@ const wordpress = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 4,
     detailUrl: '#_rails',
     liveUrl: 'https://engineeringec.com/',
     sourseUrl: '#',
@@ -239,7 +226,6 @@ const wordpress = [
 // Rails
 const rails = [
   {
-    id: 1,
     detailUrl: '#_rails',
     liveUrl: 'https://musong-budget-app.onrender.com/',
     sourseUrl: 'https://github.com/ernestmusong/Budget-app',
@@ -255,7 +241,6 @@ const rails = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 2,
     detailUrl: '#_rails',
     liveUrl: '#',
     sourseUrl: 'https://github.com/ernestmusong/Recipe-app',
@@ -271,7 +256,6 @@ const rails = [
     seeSourceIcon: 'images/see-source.png',
   },
   {
-    id: 3,
     detailUrl: '#_rails',
     liveUrl: '#',
     sourseUrl: 'https://github.com/ernestmusong/Blog-app',
@@ -318,6 +302,7 @@ let currenItem = 0;
 // DISPLAYING WORKS DATA
 const displayProjects = (projects) => {
   projects.map((item) => {
+    item.id = projects.indexOf(item) + 1
     const { technologies } = item;
     let allTechnologies = '';
     for (let i = 0; i < technologies.length; i += 1) {
@@ -350,6 +335,7 @@ const displayProjects = (projects) => {
 // JAVASCRIPT
 const displayJavascritptProjects = (projects) => {
   projects.map((item) => {
+    item.id = projects.indexOf(item) + 1
     const { technologies } = item;
     let allTechnologies = '';
     for (let i = 0; i < technologies.length; i += 1) {
@@ -382,6 +368,7 @@ const displayJavascritptProjects = (projects) => {
 // RAILS
 const displayRailsProjects = (projects) => {
   projects.map((item) => {
+    item.id = projects.indexOf(item) + 1
     const { technologies } = item;
     let allTechnologies = '';
     for (let i = 0; i < technologies.length; i += 1) {
@@ -414,6 +401,7 @@ const displayRailsProjects = (projects) => {
 // WORDPRESS
 const displayWordPressProjects = (projects) => {
   projects.map((item) => {
+    item.id = projects.indexOf(item) + 1
     const { technologies } = item;
     let allTechnologies = '';
     for (let i = 0; i < technologies.length; i += 1) {
