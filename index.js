@@ -280,10 +280,10 @@ const openBtn = document.querySelector('#open');
 const closeBtn = document.querySelector('#close-btn');
  
 openBtn.addEventListener('click', () => {
-  sideBar.classList.toggle('sidebar');
+  sideBar.classList.toggle('show-sidebar');
 });
 closeBtn.addEventListener('click', () => {
-  sideBar.classList.toggle('sidebar');
+  sideBar.classList.toggle('show-sidebar');
 });
 
 // WORKS
