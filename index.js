@@ -257,7 +257,7 @@ const rails = [
   },
   {
     detailUrl: '#_rails',
-    liveUrl: '#',
+    liveUrl: 'https://www.loom.com/share/55c78619847e4574aeadd355b134a69d?sid=e7d81ff0-3f03-4ff7-867a-ce6e2748dc2d',
     sourseUrl: 'https://github.com/ernestmusong/Blog-app',
     img: 'images/rails/blog.PNG',
     name: 'Blog app',
