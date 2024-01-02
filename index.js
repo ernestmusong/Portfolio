@@ -227,7 +227,7 @@ const wordpress = [
 const rails = [
   {
     detailUrl: '#_rails',
-    liveUrl: 'https://musong-budget-app.onrender.com/',
+    liveUrl: 'https://www.loom.com/share/9c944129bc504361a51c4d5355485227',
     sourseUrl: 'https://github.com/ernestmusong/Budget-app',
     img: 'images/rails/budget-app.png',
     name: 'budget app',
