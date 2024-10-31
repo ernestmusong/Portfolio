@@ -16,6 +16,22 @@ const data = [
   },
   {
     detailUrl: '#_react',
+    liveUrl: 'https://musong-task-manager.netlify.app/',
+    sourseUrl: 'https://github.com/ernestmusong/task-manager',
+    img: 'images/works-images/task-m.jpg',
+    name: 'Task manager',
+    desc: `A robust solution for individuals or teams seeking an efficient and
+    visually pleasing way to manage their tasks, fostering productivity and organization.`,
+    technologies: ['ReactJS', 'Redux', 'Bootstrap'],
+    skills: ['ReactJS', 'Redux', 'Bootstrap'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    detailUrl: '#_react',
     liveUrl: 'https://musong-furniture-store.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-House-Furniture-Store',
     img: 'images/works-images/furniture-store.png',
@@ -189,55 +205,6 @@ const javascript = [
   },
 ];
 
-// Wordpress
-const wordpress = [
-  {
-    detailUrl: '#_javascript',
-    liveUrl: 'https://www.nextgig.biz/',
-    sourseUrl: '#',
-    img: 'images/wordpress/nextgig.png',
-    name: 'E-commerce website',
-    desc: `A multi-vendor e-commerce website built with WordPress.`,
-    technologies: ['WordPress', 'SEO', 'themes', 'Plugins'],
-    skills: ['html', 'css', 'javaScript', 'webpack'],
-    skillsImg: 'images/icon-languages.png',
-    desktopPopUpClose: 'images/desktop-popup-close.png',
-    mobilePopUpClose: 'images/close-detail.png',
-    seeLiveIcon: 'images/see-live.png',
-    seeSourceIcon: 'images/see-source.png',
-  },
-  {
-    detailUrl: '#_bootstrap',
-    liveUrl: 'https://etickets.nextgig.biz/en/',
-    sourseUrl: '#',
-    img: 'images/wordpress/event.png',
-    name: 'Ticketing website',
-    desc: `A website where users can buy tickets for events.`,
-    technologies: ['WordPress', 'SEO', 'themes', 'Plugins'],
-    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
-    skillsImg: 'images/icon-languages.png',
-    desktopPopUpClose: 'images/desktop-popup-close.png',
-    mobilePopUpClose: 'images/close-detail.png',
-    seeLiveIcon: 'images/see-live.png',
-    seeSourceIcon: 'images/see-source.png',
-  },
-  {
-    detailUrl: '#_rails',
-    liveUrl: 'https://engineeringec.com/',
-    sourseUrl: '#',
-    img: 'images/wordpress/green-engineering.png',
-    name: 'Company website',
-    desc: 'Green Engineering And Consultancy is a multidisciplinary Engineering And Consultancy company providing the best Engineering services in Cameroon with several years of engineering experience and project execution',
-    technologies: ['WordPress', 'SEO'],
-    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
-    skillsImg: 'images/icon-languages.png',
-    desktopPopUpClose: 'images/desktop-popup-close.png',
-    mobilePopUpClose: 'images/close-detail.png',
-    seeLiveIcon: 'images/see-live.png',
-    seeSourceIcon: 'images/see-source.png',
-  } 
-];
-
 // Rails
 const rails = [
   {
@@ -311,7 +278,6 @@ const popUpOverlay = document.querySelector('.popup-overlay');
 let result = '';
 let javascriptResult = '';
 let railsResult = '';
-let wordPressResult = '';
 let currenItem = 0;
 
 // DISPLAYING WORKS DATA
@@ -413,39 +379,6 @@ const displayRailsProjects = (projects) => {
   return railsResult;
 };
 
-// WORDPRESS
-const displayWordPressProjects = (projects) => {
-  projects.map((item) => {
-    item.id = projects.indexOf(item) + 1
-    const { technologies } = item;
-    let allTechnologies = '';
-    for (let i = 0; i < technologies.length; i += 1) {
-      allTechnologies += `<li><button>${technologies[i]}</button></li>`;
-    }
-    wordPressResult += `
-  <div id=${item.detailUrl} class="project">
-        <div class="image-wrapper">
-            <img class="project-img" src=${item.img} alt="project image">
-        </div>
-            <div class="project-footer">
-            <div class="project-title-wrapper">
-                <h4>${item.name}</h4>
-            </div>
-            <ul class="project-buttons-wrapper">
-               ${allTechnologies}
-            </ul>
-              <button id=${item.id.toString()} onClick=selectWordPress(this.id) class="section-button project-btn" data-id=${item.id}>
-                  see project
-              </button>
-        </div>
-    </div>
-  `;
-    return wordPressResult;
-  });
-  wordPressProjects.innerHTML = wordPressResult;
-  return wordPressResult;
-};
-
 // CLOSE POPUP
 function closePopUp() {
   popUpOverlay.classList.toggle('remove-popup');
@@ -520,47 +453,11 @@ function selectRails(id) {
   displayPopUp(rails);
   popUpOverlay.classList.toggle('remove-popup');
 }
-function selectWordPress(id) {
-  currenItem = id - 1;
-  displayPopUp(wordpress);
-  popUpOverlay.classList.toggle('remove-popup');
-}
-
-// DISPLAYING LANGUAGES DATA
-const displayLanguages = (languages) => {
-  let result = '';
-  languages.map((item) => {
-    const { skills } = item;
-    let allSkills = '';
-    for (let i = 0; i < skills.length; i += 1) {
-      allSkills += `<li><button>${skills[i]}</button></li>`;
-    }
-    result += `
-<div class="card">
-          <div class="icon-wrapper">
-              <div >
-                  <img class="icon" src=${item.skillsImg} alt="icon">
-              </div>
-          </div>
-          <div class="card-title-wrap">
-              <h4>Languages</h4>
-          </div>
-          <ul class="card-buttons-wrap">
-               ${allSkills}
-          </ul>
-      </div>
-`;
-    return result;
-  });
-  languagesDom.innerHTML = result;
-  return result;
-};
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
   popUpOverlay.classList.add('remove-popup');
   displayProjects(data);
   displayJavascritptProjects(javascript);
-  displayWordPressProjects(wordpress);
   displayRailsProjects(rails);
   displayPopUp(data);
   
