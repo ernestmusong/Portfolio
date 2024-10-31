@@ -1,6 +1,21 @@
 const data = [
   {
     detailUrl: '#_react',
+    liveUrl: 'https://betxxx.netlify.app/',
+    sourseUrl: 'https://github.com/ernestmusong/sportsbook.git',
+    img: 'images/works-images/sportsbook-img.PNG',
+    name: 'Sportsbook',
+    desc: `A responsive sports betting app where users can signup, signin, place bets, deposit/withdraw funds`,
+    technologies: ['NextJS', 'Redux', 'TypeScript', 'mongoDB'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    detailUrl: '#_react',
     liveUrl: 'https://musong-furniture-store.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/React-House-Furniture-Store',
     img: 'images/works-images/furniture-store.png',
