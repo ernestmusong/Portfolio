@@ -352,6 +352,10 @@ nav {
   display: none;
 }
 
+#node-card-item {
+  width: 327px;
+}
+
 .image-wrapper {
   height: 268px;
   width: 100%;

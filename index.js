@@ -16,6 +16,23 @@ const data = [
   },
   {
     detailUrl: '#_react',
+    liveUrl: 'https://becuda-buea-demo.netlify.app/',
+    sourseUrl: 'https://github.com/ernestmusong/becuda-buea.git',
+    img: 'images/works-images/becuda-buea-demo.PNG',
+    name: 'Finance management app',
+    desc: ` A comprehensive financial management app designed to simplify personal finances by offering 
+    seamless tools for saving, withdrawing, borrowing, and managing fines. Users can track their savings
+     growth and keep a record of any imposed fines`,
+    technologies: ['NextJS', 'Redux', 'TypeScript', 'mongoDB'],
+    skills: ['javascript', 'ruby on rails', 'postgres', 'html'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+  {
+    detailUrl: '#_react',
     liveUrl: 'https://musong-task-manager.netlify.app/',
     sourseUrl: 'https://github.com/ernestmusong/task-manager',
     img: 'images/works-images/task-m.jpg',
@@ -205,6 +222,25 @@ const javascript = [
   },
 ];
 
+// Node
+const node = [
+  {
+    detailUrl: 'node-card-item',
+    liveUrl: '#',
+    sourseUrl: 'https://github.com/ernestmusong/Cultural-website-backend/tree/dev',
+    img: 'images/works-images/node-min.PNG',
+    name: 'User authorization and authentication',
+    desc: `User authorization and authentication with NodeJS and Express. Sign up, Login, and Logout.`,
+    technologies: ['nodeJS', 'Express', 'jwt', 'mongoDB'],
+    skills: ['nodeJS', 'Express', 'jwt'],
+    skillsImg: 'images/icon-languages.png',
+    desktopPopUpClose: 'images/desktop-popup-close.png',
+    mobilePopUpClose: 'images/close-detail.png',
+    seeLiveIcon: 'images/see-live.png',
+    seeSourceIcon: 'images/see-source.png',
+  },
+]
+
 // Rails
 const rails = [
   {
@@ -272,12 +308,13 @@ closeBtn.addEventListener('click', () => {
 const worksDom = document.querySelector('.cards-container');
 const javascriptProjects = document.querySelector('#javascript-cards');
 const railsProjects = document.querySelector('#rails-cards');
-const wordPressProjects = document.querySelector('#wordpress-cards');
+const nodeProjects = document.querySelector('#node');
 const languagesDom = document.querySelector('#cards-container');
 const popUpOverlay = document.querySelector('.popup-overlay');
 let result = '';
 let javascriptResult = '';
 let railsResult = '';
+let nodeResult = '';
 let currenItem = 0;
 
 // DISPLAYING WORKS DATA
@@ -378,6 +415,37 @@ const displayRailsProjects = (projects) => {
   railsProjects.innerHTML = railsResult;
   return railsResult;
 };
+const displayNodeProjects = (projects) => {
+  projects.map((item) => {
+    item.id = projects.indexOf(item) + 1
+    const { technologies } = item;
+    let allTechnologies = '';
+    for (let i = 0; i < technologies.length; i += 1) {
+      allTechnologies += `<li><button>${technologies[i]}</button></li>`;
+    }
+    nodeResult += `
+  <div id=${item.detailUrl} class="project">
+        <div class="image-wrapper">
+            <img class="project-img" src=${item.img} alt="project image">
+        </div>
+            <div class="project-footer">
+            <div class="project-title-wrapper">
+                <h4>${item.name}</h4>
+            </div>
+            <ul class="project-buttons-wrapper">
+               ${allTechnologies}
+            </ul>
+              <button id=${item.id.toString()} onClick = selectNode(this.id) class="section-button project-btn" data-id=${item.id}>
+                  see project
+              </button>
+        </div>
+    </div>
+  `;
+    return nodeResult;
+  });
+  nodeProjects.innerHTML = nodeResult;
+  return nodeResult;
+};
 
 // CLOSE POPUP
 function closePopUp() {
@@ -448,6 +516,11 @@ function selectJavaScript(id) {
   displayPopUp(javascript);
   popUpOverlay.classList.toggle('remove-popup');
 }
+function selectNode(id) {
+  currenItem = id - 1;
+  displayPopUp(node);
+  popUpOverlay.classList.toggle('remove-popup');
+}
 function selectRails(id) {
   currenItem = id - 1;
   displayPopUp(rails);
@@ -458,6 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
   popUpOverlay.classList.add('remove-popup');
   displayProjects(data);
   displayJavascritptProjects(javascript);
+  displayNodeProjects(node);
   displayRailsProjects(rails);
   displayPopUp(data);
   
